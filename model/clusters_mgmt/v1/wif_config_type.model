@@ -18,6 +18,8 @@ limitations under the License.
 class WifConfig {
 	// The name OCM clients will display for this wif_config.
 	DisplayName String
+	// ID(s) of the template(s) used to configure IAM resources
+	WifTemplateIds []String
 	// Holds GCP related data.
 	Gcp WifGcp
 	// The OCM organization that this wif_config resource belongs to.
@@ -31,6 +33,8 @@ struct WifGcp {
 	ProjectId String
 	// This represents the GCP project number in which the wif resources will be configured.
 	ProjectNumber String
+	// Configurable prefix for GCP custom roles configured.
+	RolePrefix String
 	// The list of service accounts and their associated roles that will need to be
 	// configured on the user's GCP project.
 	ServiceAccounts []WifServiceAccount

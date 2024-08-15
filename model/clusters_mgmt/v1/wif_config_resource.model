@@ -26,4 +26,9 @@ resource WifConfig {
 		// Dry run flag is used to check if the operation can be completed, but won't delete.
 		in DryRun Boolean = false
 	}
+
+	// Updates the wif_config.
+	method Update {
+		in out Body WifConfig
+	}
 }
